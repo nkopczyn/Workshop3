@@ -12,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title> Pokaż Użytkownika </title>
+  <title> Edytuj Użytkownika </title>
 
   <!-- Custom fonts for this template-->
   <link href="<c:url value="/theme/vendor/fontawesome-free/css/all.min.css"/>" rel="stylesheet">
@@ -85,7 +85,7 @@
       <%--     Formularz         --%>
       <form action="/user/edit" method="post" style="margin: 40px auto; width: 300px;">
 
-        <label> Edytuj użytkownika ${id} </label>
+        <label> Edytuj użytkownika numer ${id} </label>
 
         <input type="hidden" name="id" value="${id}" />
 
