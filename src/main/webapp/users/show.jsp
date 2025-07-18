@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Dodaj Użytkownika </title>
+    <title> Pokaż Użytkownika </title>
 
     <!-- Custom fonts for this template-->
     <link href="<c:url value="/theme/vendor/fontawesome-free/css/all.min.css"/>" rel="stylesheet">
@@ -82,26 +82,30 @@
 
             <%--     SHOW readUser     --%>
 
-            <h4 style="text-align: center;"> Szczegóły użytkownika </h4>
-            <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
+            <div>
 
-                <tr>
-                    <td>ID</td>
-                    <td>${readUser.id}</td>
-                </tr>
-                <tr>
+                <h4 style="text-align: center;"> Szczegóły użytkownika </h4>
+                <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
 
-                    <td>Nazwa użytkownika</td>
-                    <td>${readUser.userName}</td>
-                </tr>
-                <tr>
+                    <tr>
+                        <td>ID</td>
+                        <td>${readUser.id}</td>
+                    </tr>
+                    <tr>
 
-                    <td>Email</td>
-                    <td>${readUser.email}</td>
+                        <td>Nazwa użytkownika</td>
+                        <td>${readUser.userName}</td>
+                    </tr>
+                    <tr>
 
-                </tr>
+                        <td>Email</td>
+                        <td>${readUser.email}</td>
 
-            </table>
+                    </tr>
+
+                </table>
+
+            </div>
 
 
             <%--  FOOTER . JSP --%>
