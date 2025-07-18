@@ -102,8 +102,8 @@
                     <td>${user.userName}</td>
                     <td>${user.email}</td>
                     <td>
-                        <a href="#">Edytuj</a>
-                        <a href="#">Usuń</a>
+                        <a href="/user/edit?id=${user.id}">Edytuj</a>
+                        <a href="/user/delete?id=${user.id}">Usuń</a>
                         <a href="/user/show?id=${user.id}"> Pokaż </a>
                     </td>
                 </tr>
