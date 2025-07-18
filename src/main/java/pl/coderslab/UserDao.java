@@ -88,7 +88,7 @@ public class UserDao {
 
         try
                 (Connection connection = DbUtil.getConnection();
-                 PreparedStatement preparedStatement3 = connection.prepareStatement(UPDATE_QUERY)) {
+                 PreparedStatement preparedStatement3 = connection.prepareStatement(DELETE_QUERY)) {
 
             preparedStatement3.setInt(1, idUser);
             preparedStatement3.executeUpdate();
