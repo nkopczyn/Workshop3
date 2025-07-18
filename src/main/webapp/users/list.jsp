@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html lang="en">
@@ -15,14 +15,11 @@
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
-<%--    <link href="../src/main/webapp/theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">--%>
     <link href="<c:url value="/theme/vendor/fontawesome-free/css/all.min.css"/>" rel="stylesheet">
-
 
 <%--    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">--%>
 
     <!-- Custom styles for this template-->
-<%--    <link href="../src/main/webapp/theme/css/sb-admin-2.min.css" rel="stylesheet">--%>
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
 
 
@@ -81,6 +78,42 @@
             <%@ include file="/header.jsp" %>
 
             <!-- End of Main Content -->
+
+
+
+<%--        Table with find all UserDao
+            Lista wszytskich użytkowników --%>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
+
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa Użytkownika</th>
+                <th>Email</th>
+                <th>Akcja</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <c:forEach var="user" items="${users}">
+                <tr>
+                    <td>${user.id}</td>
+                    <td>${user.userName}</td>
+                    <td>${user.email}</td>
+                    <td>
+                        <a href="#">Edytuj</a>
+                        <a href="#">Usuń</a>
+                        <a href="#">Pokaż</a>
+                    </td>
+                </tr>
+            </c:forEach>
+
+            </tbody>
+
+
+        </table>
+
         </div>
 
 

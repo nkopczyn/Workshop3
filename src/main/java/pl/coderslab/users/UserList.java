@@ -16,14 +16,27 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pl.coderslab.User;
+import pl.coderslab.UserDao;
+
 import java.io.IOException;
 
-@WebServlet(name = "UserList", value = "/UserList")
+@WebServlet(name = "UserList", value = "/user/list")
 public class UserList extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+        UserDao userDao = new UserDao();
+
+        request.setAttribute("users", userDao.findAll());
+
+
+
+        //response.getWriter().print(userDao.findAll());
+
         getServletContext().getRequestDispatcher("/users/list.jsp")
                 .forward(request, response);
+
 
     }
 
