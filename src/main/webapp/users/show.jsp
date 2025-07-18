@@ -12,12 +12,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title> Dodaj Użytkownika </title>
 
     <!-- Custom fonts for this template-->
     <link href="<c:url value="/theme/vendor/fontawesome-free/css/all.min.css"/>" rel="stylesheet">
 
-<%--    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">--%>
+    <%--    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">--%>
 
     <!-- Custom styles for this template-->
     <link href="<c:url value="/theme/css/sb-admin-2.css"/>" rel="stylesheet">
@@ -72,83 +72,69 @@
             </nav>
 
 
-<%--  HEADER . JSP --%>
+            <%--  HEADER . JSP --%>
             <!-- Begin Page Content -->
 
-            <%@ include file="/header.jsp" %>
+            <%@ include file="/header-add.jsp" %>
 
             <!-- End of Main Content -->
 
 
+            <%--     SHOW readUser     --%>
 
-<%--        Table with find all UserDao
-            Lista wszytskich użytkowników --%>
+            <h4 style="text-align: center;"> Szczegóły użytkownika </h4>
+            <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
 
-        <table border="1" cellpadding="8" cellspacing="0" style="margin: auto">
-
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nazwa Użytkownika</th>
-                <th>Email</th>
-                <th>Akcja</th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <c:forEach var="user" items="${users}">
                 <tr>
-                    <td>${user.id}</td>
-                    <td>${user.userName}</td>
-                    <td>${user.email}</td>
-                    <td>
-                        <a href="#">Edytuj</a>
-                        <a href="#">Usuń</a>
-                        <a href="/user/show?id=${user.id}"> Pokaż </a>
-                    </td>
+                    <td>ID</td>
+                    <td>${readUser.id}</td>
                 </tr>
-            </c:forEach>
+                <tr>
 
-            </tbody>
+                    <td>Nazwa użytkownika</td>
+                    <td>${readUser.userName}</td>
+                </tr>
+                <tr>
+
+                    <td>Email</td>
+                    <td>${readUser.email}</td>
+
+                </tr>
+
+            </table>
 
 
-        </table>
+            <%--  FOOTER . JSP --%>
+            <!-- Footer -->
+
+            <%@ include file="/footer.jsp" %>
+
+            <!-- End of Footer -->
 
         </div>
-
-
-        <%--  FOOTER . JSP --%>
-        <!-- Footer -->
-
-        <%@ include file="/footer.jsp" %>
-
-        <!-- End of Footer -->
-
+        <!--    &lt;!&ndash; End of Content Wrapper &ndash;&gt;-->
     </div>
-    <!--    &lt;!&ndash; End of Content Wrapper &ndash;&gt;-->
-</div>
 
 
-<!-- End of Page Wrapper -->
+    <!-- End of Page Wrapper -->
 
 
+    <!-- Bootstrap core JavaScript-->
+    <script src="../src/main/webapp/theme/vendor/jquery/jquery.min.js"></script>
+    <script src="../src/main/webapp/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<!-- Bootstrap core JavaScript-->
-<script src="../src/main/webapp/theme/vendor/jquery/jquery.min.js"></script>
-<script src="../src/main/webapp/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../src/main/webapp/theme/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="../src/main/webapp/theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../src/main/webapp/theme/js/sb-admin-2.min.js"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="../src/main/webapp/theme/js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="../src/main/webapp/theme/vendor/chart.js/Chart.min.js"></script>
 
-<!-- Page level plugins -->
-<script src="../src/main/webapp/theme/vendor/chart.js/Chart.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="../src/main/webapp/theme/js/demo/chart-area-demo.js"></script>
-<script src="../src/main/webapp/theme/js/demo/chart-pie-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="../src/main/webapp/theme/js/demo/chart-area-demo.js"></script>
+    <script src="../src/main/webapp/theme/js/demo/chart-pie-demo.js"></script>
 
 </body>
 
